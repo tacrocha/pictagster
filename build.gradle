@@ -1,0 +1,19 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.springframework:spring-context:4.2.1.RELEASE'
+    compile 'org.springframework.data:spring-data-jpa:1.9.0.RELEASE'
+    compile 'org.hibernate:hibernate-entitymanager:5.0.2.Final'
+    compile 'org.apache.commons:commons-dbcp2:2.1.1'
+
+    compile 'org.hsqldb:hsqldb:2.3.3'
+
+    testCompile "junit:junit:4.11"
+}
+
