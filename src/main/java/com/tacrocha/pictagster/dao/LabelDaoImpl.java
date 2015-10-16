@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 /**
  * Created by tacio on 2015-10-15.
@@ -34,5 +35,10 @@ public class LabelDaoImpl implements LabelDao {
     @Override
     public void deleteLabel(Label label) {
 
+    }
+
+    @Override
+    public List<Label> retrieveAllLabels() {
+        return em.createQuery("select label from Label as label").getResultList();
     }
 }
